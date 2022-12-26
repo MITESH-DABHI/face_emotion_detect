@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Streaming Video Recorder</title>
+  <link rel="stylesheet" href="/static/index.css">
+
+</head>
+<body>
+  <h1>Streaming Video Recorder</h1>
+
+  <div id="progressBar">
+    <div></div>
+  </div>
+
+  <div id="recorder">
+    <button id="record">Record</button>
+    <button id="stop">Stop</button>
+    <a id="download"></a>
+    <script type="text/javascript" src="{{ url_for('static', filename='recorder.js') }}"></script>
+  </div>
+  <img id="video" src="{{ url_for('video_viewer') }}">
+
+  <img src="{{ url_for('image_viewer') }}" alt="User Image">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
